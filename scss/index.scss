@@ -8,6 +8,9 @@ body, html {
     background: #1B1B1B;
     color: #fff;
 }
+button {
+    border: none;
+}
 a {
     text-decoration: none;
     color: #fff;
@@ -170,18 +173,230 @@ body.lock {
     }
 }
 .service {
+    margin-top: 165px;
 }
 .service__title {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 130%;
+    margin-bottom: 44px;
 }
 .service__body {
 }
 .grid__row_1 {
-}
-.service__item {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 32px;
 }
 .grid__row_2 {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 32px;
+    margin-top: 32px;
+}
+.service__item {
+    padding: 44px;
+    h3 {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+        text-transform: uppercase;
+    }
+}
+.service__1 {
+    background: url('../img/service_1.png') no-repeat;
+    height: 462px;
+    object-fit: cover;
+    object-position: bottom;
+    position: relative;
+    h3 {
+        position: absolute;
+        right: 44px;
+    }
+}
+.service__2 {
+    background: url('../img/service_2.png')  no-repeat;
+    height: 462px;
+    position: relative;
+    h3 {
+        position: absolute;
+        bottom: 44px;
+    }
+}
+.service__3 {
+    background: url('../img/service_3.png')  no-repeat;
+    background-position: left bottom;
+    height: 462px;
+    position: relative;
+    h3 {
+        position: absolute;
+        right: 44px;
+        a {
+            text-decoration: none;
+        }
+    }
+}
+.service__4 {
+    background: url('../img/service_4.png')  no-repeat;
+    height: 462px;
+    position: relative;
+    h3 {
+        position: absolute;
+        bottom: 44px;
+    }
 }
 
+.search {
+    position: relative;
+    .Ellipse_98 {
+        position: absolute;
+        width: 408px;
+        height: 100%;
+        left: 0;
+        top: -210px;
+    }
+}
+.search_title-block {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    .block__title {
+        max-width: 600px;
+        h2 {
+            font-weight: 300;
+            font-size: 48px;
+            line-height: 120%;
+            span {
+                font-weight: 600;
+            }
+        }
+        p {
+            font-weight: 600;
+            font-size: 19px;
+            line-height: 140%;
+        }
+    }
+    
+    img {
+        width: 124px;
+    }
+}
+
+.block__reviews {
+    padding-top: 100px;
+    h2 {
+        font-weight: 800;
+        font-size: 32px;
+        line-height: 38px;
+    }
+}
+
+.slider {
+    position: relative;
+}
+.slick-track {
+    display: flex;
+    justify-content: center;
+}
+.slick-list {
+    overflow: hidden;
+}
+/*------ arrow -------*/
+.slick-arrow {
+    position: absolute;
+    top: 93%;
+    z-index: 10;
+    font-size: 0;
+    width: 54px;
+    height: 54px;
+    cursor: pointer;
+}
+.slick-arrow.slick-prev {
+    background: url('../img/white-arrow-l.svg') 0 0 / 100% no-repeat;
+    left: 38%;
+
+} 
+.slick-arrow.slick-next {
+    background: url('../img/white-arrow-r.svg') 0 0 / 100% no-repeat;
+    right: 38%;
+
+}
+.slick-arrow.slick-prev:hover {
+    background: url('../img/black-arrow-l.svg') 0 0 / 100% no-repeat;
+} 
+.slick-arrow.slick-next:hover {
+    background: url('../img/black-arrow-r.svg') 0 0 / 100% no-repeat;
+}
+/*------ dots -------*/
+.slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+/* Элемент точки */
+.slick-dots li button {
+    font-size: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #525252;
+    margin: 0 7px;
+}
+/* Активная точка */
+.slick-dots li.slick-active button {
+    background: #39F2B3;
+}
+
+
+.review__item {
+    background: linear-gradient(106.55deg, #272727 0%, #242424 100%);
+    border-radius: 8px;
+    padding: 45px 33px;
+    max-width: 540px;
+    margin: 44px 12px 0;
+    z-index: 5;
+    p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+.review__name_top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+.box__name {
+    display: flex;
+    align-items: center;
+    max-width: 200px;
+    img {
+        width: 63px;
+        margin-right: 12px;
+    }
+}
+.rew_name {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+}
+.date {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.advantages {
+    margin-top: 100px;
+    h2 {
+        font-weight: 800;
+        font-size: 32px;
+        line-height: 38px;
+    }
+}
 
 
 
@@ -190,6 +405,11 @@ body.lock {
 /*==============================================================================================*/
 /*=========================== Media ============================================================*/
 /*==============================================================================================*/
+@media screen and (max-width: 992px)  {
+    .review__item {
+        max-width: 460px;
+    }
+}
 @media screen and (min-width: 768px) {
     .header__mobile-menu  {
         display: none;
@@ -316,12 +536,56 @@ body.lock {
             }
         }
     }
-    
     .mobile-menu-item {
         display: flex;
         flex-direction: column;
     }
     /*------------------------*/
+    .grid__row_1 {
+        grid-template-columns: 100%;
+    }
+    .grid__row_2 {
+        grid-template-columns: 100%;
+    }
+    .review__item {
+        max-width: 98%;
+        margin: 44px 0;
+    }
+    .slick-arrow.slick-next {
+        right: 60px;
+    }
+    .slick-arrow.slick-prev {
+        left: 60px;
+    }
+    .slick-dots {
+        margin-top: 0px;
+    }
+}
 
+@media screen and (max-width: 560px){
+    .hero__body h1 {
+        font-size: 66px;
+    }
+    .service {
+        margin-top: 80px;
+    }
+    .search_title-block .block__title h2 {
+        font-size: 28px;
+    }
+    .search_title-block .block__title p {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+}
 
+@media screen and (max-width: 420px){
+    .hero__body h1 {
+        font-size: 52px;
+    }
+    .hero__body p {
+        font-size: 16px;
+    }
+    .hero__body .main__btn {
+        margin-top: 40px;
+    }
 }
